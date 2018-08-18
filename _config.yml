@@ -1,43 +1,98 @@
-# Welcome to Jekyll!
+## Welcome to Jekyll!
+##
+## This config file is meant for settings that affect your whole blog, values
+## which you are expected to set up once and rarely edit after that. If you find
+## yourself editing this file very often, consider using Jekyll's data files
+## feature for the data you need to update frequently.
+##
+## For technical reasons, this file is *NOT* reloaded automatically when you use
+## 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+## Site settings
+## These are used to personalize your new site. If you look in the HTML files,
+## you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+## You can create any custom variable you would like, and they will be accessible
+## in the templates via {{ site.myvariable }}.
+#title: Your awesome title
+#email: your-email@example.com
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+#github_username:  jekyll
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+## Build settings
+#markdown: kramdown
+#theme: minima
+#plugins:
+#  - jekyll-feed
+#
+## Exclude from processing.
+## The following items will not be processed, by default. Create a custom list
+## to override the default setting.
+## exclude:
+##   - Gemfile
+##   - Gemfile.lock
+##   - node_modules
+##   - vendor/bundle/
+##   - vendor/cache/
+##   - vendor/gems/
+##   - vendor/ruby/
+title: Tech Problems
+description: Problems List
+author: Sandesh Rana
+github: https://github.com/vimm0
+about: Hello (नमस्ते), I'm developer from Nepal.
+disqus_shortname: techproblems
+#google_analytics: UA-XXXXXXXX-Y
+avatar_url: /static/img/github-pic.png
+#
+enableTags: true
+tagarray: []
+#
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+social:
+    - icon: fa-facebook
+      link: "#"
+    - icon: fa-twitter
+      link: "https://twitter.com/vimm0"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/sandesh-rana-12783611a/"
+    - icon: fa-stack-exchange
+      link: "#"
+    - icon: fa-github
+      link: "https://github.com/vimm0"
 
-# Build settings
+share:
+  twitter_username: vimm0
+#  fb_appid: 1749788565247320
+#
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+#    - text: XML Feed
+#      url: /feed.xml
+#
+url: "https://vimm0.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+gems:
+  - jekyll-paginate
+  - jekyll-gist
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
