@@ -130,7 +130,7 @@ layout: compress
             </ul>
           </div>
           <div class="search" id="js-search">
-            <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
+            <input type="text" placeholder="search posts" class="search__input form-control" id="js-search__input">
             <ul class="search__results" id="js-search__results"></ul>
           </div>
           <hr />
@@ -147,9 +147,10 @@ layout: compress
       <div class="col-sm-8 col-offset-1 main-layout">
         {{ content }}
         <footer>
-          &copy; {{ site.author }}
+          <!--&copy; -->
+          {{ site.author }}
           {% if site.github %}
-            - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by Jekyll.
+            - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by <a href="https://github.com/jekyll">Jekyll</a>.
           {% endif %}
           <div class="btn-github" style="float:right;">
             <iframe src="https://ghbtns.com/github-btn.html?user=vimm0&repo=vimm0.github.io&type=star&count=true" frameborder="0" scrolling="0" width="85" height="20px"></iframe>

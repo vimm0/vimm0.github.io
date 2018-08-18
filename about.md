@@ -6,8 +6,8 @@ permalink: /about/
 
 Hello (नमस्ते), I'm developer from Nepal.
 
-Email: vimmrana0@gmail.com
+Email: [vimmrana0@gmail.com](vimmrana0@gmail.com)
 
-Website: vimm0.github.io
+Website: [vimm0.github.io](vimm0.github.io)
 
-Education blog: https://shikshalaya.netlify.com/
+Education blog: [https://shikshalaya.netlify.com/](https://shikshalaya.netlify.com/)

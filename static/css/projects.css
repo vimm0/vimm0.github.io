@@ -40,7 +40,7 @@ span.tags:last-child {
   position: relative;
   float: right;
   font-size: 13px;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 .project-inner > a {
   display: block;
@@ -76,5 +76,5 @@ a.project-detail:hover {
   text-decoration: none;
 }
 a.project-detail:hover h3 {
-  color: #62A253;
+  color: #428bca;
 }
