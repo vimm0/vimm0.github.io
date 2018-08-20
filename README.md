@@ -1,7 +1,7 @@
 ### Post
 
 1. Create post inside `_posts` with format of file `YYYY-MM-DD-TITLE.md`
-2. 
+2. Add formatter 
 
 ```
 
@@ -12,3 +12,4 @@
     categories: [ruby]
     ---
 ```
+3. Add category if not present else skip.
