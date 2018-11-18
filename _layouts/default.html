@@ -89,6 +89,134 @@ layout: compress
     <!-- Font awesome icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            background: url("/static/img/subtle_dots.png");
+            line-height: 1.5em;
+            font-weight: 300;
+            font-size: 16px;
+            color: #666
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #F7F1F1;
+            border-bottom: 1px solid #fff
+        }
+
+        h1 {
+            color: #696969;
+            font-weight: normal
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 25px
+        }
+
+        a, a:link {
+            text-decoration: none;
+            color: #428bca
+        }
+
+        .main-layout {
+            background: #fff;
+            margin-top: 10rem
+        }
+
+        .sidebar-nav {
+            margin: 0;
+            padding: 0
+        }
+
+        .sidebar-nav a {
+            display: block;
+            margin: 0;
+            list-style: none
+        }
+
+        .sidebar-nav a::before {
+            content: "»";
+            margin-right: .5em
+        }
+
+        footer {
+            border-top: 1px solid #F7F1F1;
+            width: 100%;
+            height: 10px;
+            margin-top: 10px;
+            margin-bottom: 3em;
+            padding-top: 10px;
+            color: #C2C2C2;
+            font-size: 13px;
+            bottom: 0;
+            padding-bottom: 10px
+        }
+
+        div.col-sm-3 {
+            margin-top: 100px;
+            font-size: 13px;
+            color: #666
+        }
+
+        div.col-sm-3 strong {
+            font-size: 16px;
+            color: #4A4A4A;
+            font-weight: normal
+        }
+
+        div.col-sm-3 div.profile-about {
+            margin-top: 10px;
+            color: #8C8C8C
+        }
+
+        div.col-sm-3 img.profile-avatar {
+            border-radius: 150px;
+            -webkit-border-radius: 150px;
+            -moz-border-radius: 150px;
+            -ms-border-radius: 150px;
+            -o-border-radius: 150px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .social {
+            display: block;
+            margin: 10px 0
+        }
+
+        .social ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .social ul li {
+            display: inline-block;
+            margin: 0 5px
+        }
+
+        .social li a {
+            font-size: 16px;
+            color: #969394
+        }
+
+        @media (min-width: 1024px) {
+            .fixed-condition {
+                position: fixed;
+                max-width: 255px
+            }
+        }
+
+        @media (max-width: 768px) {
+            div.col-sm-3 {
+                margin-top: 30px
+            }
+        }
+    </style>
     <!--defer css-->
     <!--https://pegasaas.com/how-to-defer-render-blocking-css/-->
     <link rel='preload' href='/static/css/bootstrap.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
@@ -170,8 +298,8 @@ layout: compress
 <!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/static/js/jquery.js"></script>
-<script src = "//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
-<script src = "/static/js/bootstrap.min.js" ></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/super-search.js"></script>
 <script src="/static/js/thickbox-compressed.js"></script>
 <script src="/static/js/projects.js"></script>
