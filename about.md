@@ -7,8 +7,7 @@ permalink: /about/
 Hello (नमस्ते), My name is Sandesh Rana, and I am a professional freelancer/developer based in Nepal.
 I do front-end and back-end web development. 
 
-I have maintained, developed and launched multiple projects from scratch, carrying the development 
-of its' back-end and front-end codebases.
+I have maintained, developed and deploy many projects from scratch.
 
 Feel free to ask me any questions. I can help you in 
 your project in all from the UI mockups, back-end and front-end web development to fixing the design
