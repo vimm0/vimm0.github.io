@@ -1,6 +1,6 @@
 ### Post
 
-1. Create post inside `_posts` with format of file `YYYY-MM-DD-TITLE.md`
+1. Create post inside `_posts` with format file with `YYYY-MM-DD-TITLE.md`
 2. Add formatter 
 
 ```

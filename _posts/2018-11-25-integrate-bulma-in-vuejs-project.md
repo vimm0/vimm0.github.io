@@ -2,7 +2,7 @@
 layout: post
 title:  "Integrate Bulma in Vue Js Project"
 date:   2018-11-25 01:20:36 +0545
-categories: VueJs
+categories: vuejs
 ---
 
 
