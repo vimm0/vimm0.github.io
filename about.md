@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
@@ -38,3 +38,6 @@ B.Sc. Computer Science and Information Technology under [Tribhuvan University](h
 
 ##### Contact:
 Email: vimmrana0@gmail.com
+
+##### Company:
+[Nepex Group](https://www.nepexgroup.com/)
