@@ -6,7 +6,7 @@ categories: django
 ---
 If you want to "graphql-voyager" on  "graphene_django", you should override template in "graphene_django/templates/graphene/graphiql.html"
 
-{% gist c11ff90b83429e45a91b7b97c50ba6e6 graphiql.md %}
+{% gist c11ff90b83429e45a91b7b97c50ba6e6 %}
 
 Sources from Graphene Django Issues:
 
