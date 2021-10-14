@@ -4,7 +4,7 @@ title: "Graphql-voyager on graphene-django"
 date: 2021-10-14 01:02:36 +0545
 categories: django
 ---
-If you want to "graphql-voyager" on  "graphene_django", you should override template in "graphene_django/templates/graphene/graphiql.html"
+If you want to `graphql-voyager` on `graphene_django`, you should override template in `graphene_django/templates/graphene/graphiql.html`.
 
 {% gist c11ff90b83429e45a91b7b97c50ba6e6 %}
 
