@@ -18,6 +18,7 @@ ALLOWED_HOSTS = ['<ip-address>']
 
 - runserver django server with `./manage.py runserver <ip-address>:8000`
 - edit your `webpack.config.js` file 
+
 ```
 webpack.config.js [in dev mode.]
 
@@ -27,6 +28,7 @@ disableHostCheck: true,
 port: 9000
 ....
 ```
+
 - edit your `src/config.ts` file 
 
 ```
@@ -36,6 +38,7 @@ src/config.ts [in dev mode.]
 export const API_URI = "http://<ip-address>/graphql/";
 ....
 ```
+
 - runserver dashboard server as usual.
 - also you might need to allow external request with `ufw`
 - `sudo ufw allow <port-number>` in this case `9000`.
