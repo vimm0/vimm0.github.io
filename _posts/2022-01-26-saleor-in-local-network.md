@@ -5,7 +5,7 @@ date: 2022-01-26 06:00:36 +0545
 categories: django
 ---
 
-- `<ip-address>` should be your ip address and is exclusive of http protocol (http:// or https://).
+- `<ip-address>` should be your ip address and is exclusive of http protocol (`http://` or `https://`).
 
 ```
 settings.py [in dev mode.]
