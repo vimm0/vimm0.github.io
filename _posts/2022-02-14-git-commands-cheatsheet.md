@@ -19,3 +19,7 @@ git branch -d myfeature
 git push origin develop
 
 ```
+
+### Reference
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [How to use GIT when working with a team?](https://www.youtube.com/watch?v=jhtbhSpV5YA)

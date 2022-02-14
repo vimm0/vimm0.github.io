@@ -15,3 +15,4 @@ q/Q - quit manual page
 
 ### Reference
 - [Man Page wiki](https://en.wikipedia.org/wiki/Man_page)
+- [Mastering Linux Man Pages - A Definitive Guide](https://www.youtube.com/watch?v=RzAkjX_9B7E)
