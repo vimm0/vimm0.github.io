@@ -37,7 +37,7 @@ and installing & configuration of the application on staging/production envirome
 B.Sc. Computer Science and Information Technology under [Tribhuvan University](https://tribhuvan-university.edu.np/)
 
 ##### Contact:
-Email: vimmrana0@gmail.com
+Email: [vimmrana0@gmail.com](vimmrana0@gmail.com)
 
 ##### Company:
 [Nepex Group](https://www.nepexgroup.com/)
