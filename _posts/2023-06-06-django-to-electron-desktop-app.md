@@ -5,8 +5,8 @@ date: 2023-06-06 1:58:36 +0545
 categories: linux django electron
 ---
 
-![2023-06-06-django-to-electron-desktop-app-1](./assets/2023-06-06-django-to-electron-desktop-app-1.png)
-<a href="./assets/2023-06-06-django-to-electron-desktop-app-1.png" width='250' height='100' alt='steam-fish-1'>
+![2023-06-06-django-to-electron-desktop-app-1](/images/2023-06-06-django-to-electron-desktop-app-1.png)
+<a href="/images/2023-06-06-django-to-electron-desktop-app-1.png" width='250' height='100' alt='steam-fish-1'>
 
 Django application is python-based web framework that follows the model–template–views architectural pattern. This contain server which respond to client's request but django application need to start application from command prompt which need some technical knowledge. 
 
