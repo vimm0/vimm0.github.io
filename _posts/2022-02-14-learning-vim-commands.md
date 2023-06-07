@@ -2,7 +2,7 @@
 layout: post
 title: "Learning Vim Commands"
 date: 2022-02-15 10:45:36 +0545
-categories: linux, unix, vi
+categories: linux unix vi
 ---
 
 ### Vim

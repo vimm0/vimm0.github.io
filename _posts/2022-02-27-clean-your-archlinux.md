@@ -2,7 +2,7 @@
 layout: post
 title: "Clean your archlinux"
 date: 2022-02-27 8:28:36 +0545
-categories: linux, unix
+categories: linux unix
 ---
 
 You can clean your archlinux, with some suitable packages so that your system remain clean.

@@ -2,7 +2,7 @@
 layout: post
 title: "Reading manual pages"
 date: 2022-02-14 10:45:36 +0545
-categories: linux, unix
+categories: linux unix
 ---
 
 Man - refered to manual page
