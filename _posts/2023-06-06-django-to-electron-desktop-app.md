@@ -4,6 +4,7 @@ title: "Django to electron desktop application"
 date: 2023-06-06 1:58:36 +0545
 categories: linux django electron
 ---
+
 {:refdef: style="text-align: center;"}
 ![2023-06-06-django-to-electron-desktop-app-1](/images/2023-06-06-django-to-electron-desktop-app-1.png){: width="50%" height="80%" }
 {: refdef}
