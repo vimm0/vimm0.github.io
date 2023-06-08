@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Customize ohmyzsh to improve workflow in git"
-date: 2023-06-06 1:11:36 +0545
+date: 2023-06-08 1:11:36 +0545
 categories: linux git zsh ohmyzsh
 ---
 
