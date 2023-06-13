@@ -10,7 +10,7 @@ You can clean your archlinux, with some suitable packages so that your system re
 
 
 ### Some useful commands
-```
+```bash
 1. Clean package cache
 sudo pacman -U /var/cache/pacman/pkg/packagename
     - Cleaning the cache manually

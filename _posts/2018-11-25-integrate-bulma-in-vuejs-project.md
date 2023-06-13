@@ -6,7 +6,7 @@ categories: vuejs
 ---
 
 
-{% highlight ruby %}
+{% highlight bash %}
 $ yarn add bulma
 $ yarn add axios
 $ touch src/assets/sass/main.scss

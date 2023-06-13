@@ -88,6 +88,44 @@ Sourcegraph provides a feature called "code annotations" that allows developers 
     - [`patternType:regexp "// TODO:"`](https://sourcegraph.com/search?q=patternType%3Aregexp+%22%2F%2F+TODO%3A%22)
 - Combine it with other search keywords to narrow down your search to specific repositories or files.
 
+#### Some examples
+- Find projects that welcome contributions
+  - [`contributing lang:Markdown`](https://sourcegraph.com/search?q=context:global+contributing+lang:Markdown+&patternType=literal)
+  - [`hacktoberfest lang:Markdown`](https://sourcegraph.com/search?q=context:global+hacktoberfest+lang:Markdown+&patternType=literal)
+
+- Find Hacktoberfest-friendly projects using a certain language or framework
+  - [`hacktoberfest lang:Markdown repohasfile:"^composer.json$" patterntype:regexp`](https://sourcegraph.com/search?q=context:global+hacktoberfest+lang:Markdown+repohasfile:%22%5Ecomposer.json%24%22&patternType=regexp)
+  - [`hacktoberfest lang:Markdown repohasfile:"^artisan$" patterntype:regexp`](https://sourcegraph.com/search?q=context:global+hacktoberfest+lang:Markdown+repohasfile:%22artisan%22&patternType=regexp)
+
+- Find projects that rely on specific dependencies
+  - [`tailwindcss file:package.json`](https://sourcegraph.com/search?q=context:global+file:package.json+tailwindcss&patternType=literal)
+  - [`file:package.json tailwindcss repohasfile:"composer.json" patterntype:regexp`](https://sourcegraph.com/search?q=context:global+file:package.json+tailwindcss+repohasfile:%22composer.json%22&patternType=regexp)
+
+- Find how an object is used across multiple repositories
+  - [`repo:^github\.com/minicli/.* new TableHelper lang:PHP`](https://sourcegraph.com/search?q=context:global+repo:%5Egithub%5C.com/minicli/.*+new+TableHelper+lang:PHP&patternType=literal)
+  - [`repo:^github\.com/minicli/.* getPrinter()->out(...,...) patterntype:structural`](https://sourcegraph.com/search?q=context%3Aglobal+repo%3A%5Egithub%5C.com%2Fminicli%2F.*+getPrinter%28%29-%3Eout%28...%2C...%29&patternType=structural&groupBy=repo)
+
+- Find keys and secrets that should not have been committed to the codebase
+  - [`repo:^github\.com/sourcegraph/.* (key|secret|token)-[\w+]{32,} patterntype:regexp`](https://sourcegraph.com/search?q=context:global+repo:%5Egithub%5C.com/sourcegraph/.*+%28key%7Csecret%7Ctoken%29-%5B%5Cw%2B%5D%7B32%2C%7D&patternType=regexp)
+
+- Find usage of compromised dependencies
+  - [`symfont/process lang:JSON`](https://sourcegraph.com/search?q=context:global+symfont/process+lang:JSON+&patternType=literal)
+
+- Audit an organization for outdated or vulnerable dependencies across repositories
+  - [`file:package.json lodash 4.17.19 patterntype:regexp`](https://sourcegraph.com/search?q=context:global+file:package.json+lodash+4.17.19&patternType=regexp)
+
+- Find code that is not up to language standards across multiple repositories
+  - [`lang:PHP ^if([(...)]) patterntype:regexp`](https://sourcegraph.com/search?q=context:global+lang:PHP+%5Eif%28%5B%28...%29%5D%29&patternType=regexp)
+
+- Search for recent changes in large or multiple projects
+  - [`repo:^github\.com/laravel/laravel$ type:commit after:lastweek`](https://sourcegraph.com/search?q=context%3Aglobal+repo%3A%5Egithub%5C.com%2Flaravel%2Flaravel%24+type%3Acommit+after%3Alastweek&groupBy=author)
+  - [`repo:^github\.com/laravel/.*  type:diff after:lastweek`](https://sourcegraph.com/search?q=context:global+repo:%5Egithub%5C.com/laravel/.*++type:diff+after:lastweek&patternType=literal)
+
+- Find deprecated function calls among OSS projects in your language of choice
+  - [`mhash(...) lang:PHP select:content patterntype:structural`](https://sourcegraph.com/search?q=context:global+mhash%28...%29+lang:PHP+select:content&patternType=structural)
+
+
+
 #### Conclusion
 
 By mastering these search tricks, you can efficiently navigate codebases, find relevant code locations, track changes, and discover valuable insights. Incorporate these tips into your workflow, and watch your efficiency soar as you contribute to and maintain open source projects with ease. Happy searching!

@@ -7,7 +7,7 @@ categories: linux git zsh ohmyzsh
 
 To customize the `.zshrc` file to include aliases and functions for Oh My Zsh:
 
-```shell
+```bash
 # Aliases
 alias gs='gst'
 alias gps='ggp'

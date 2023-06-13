@@ -7,7 +7,7 @@ categories: django
 
 - `<ip-address>` should be your ip address and is exclusive of http protocol (`http://` or `https://`).
 
-```
+```bash
 settings.py [in dev mode.]
 
 ....
@@ -19,7 +19,7 @@ ALLOWED_HOSTS = ['<ip-address>']
 - runserver django server with `./manage.py runserver <ip-address>:8000`
 - edit your `webpack.config.js` file 
 
-```
+```bash
 webpack.config.js [in dev mode.]
 
 ....
@@ -31,7 +31,7 @@ port: 9000
 
 - edit your `src/config.ts` file 
 
-```
+```bash
 src/config.ts [in dev mode.]
 
 ....

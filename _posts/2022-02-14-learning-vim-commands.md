@@ -10,7 +10,7 @@ categories: linux unix vi
 Vim - is Vi Improved editor for programmers.
 
 ### Some commands
-```
+```bash
 # while editing file
 :help
 # to route between helpful commands that vim provides

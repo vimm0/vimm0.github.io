@@ -10,7 +10,7 @@ Man - refered to manual page
 By default, man typically uses a terminal pager program such as more or less to display its output.
 
 ### Man Page gudelines
-```
+```bash
 #SYNOPSIS
 
 bold text          type exactly as shown.
@@ -23,7 +23,7 @@ argument ...       argument is repeatable.
 
 
 ### Some useful commands
-```
+```bash
 q/Q - quit manual page
 j - Forward  one line   (or N lines).
 k - Backward one line   (or N lines).

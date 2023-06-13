@@ -10,13 +10,13 @@ categories: google
 - Command to convert webp to png:
 
 
-{% highlight ruby %}
+{% highlight bash %}
 $ cwebp -q 80 image.png -o image.webp
 {% endhighlight %}
 
 - Command to convert png to webp:
 
-{% highlight ruby %}
+{% highlight bash %}
 $ dwebp image.webp -o image.png
 {% endhighlight %}
 
