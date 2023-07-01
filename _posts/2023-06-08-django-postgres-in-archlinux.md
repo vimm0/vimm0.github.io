@@ -9,7 +9,7 @@ categories: linux django postgres
 
 This guide will walk you through the process of setting up Django, a popular Python web framework, and PostgreSQL, a powerful open-source relational database management system, on Arch Linux.
 
-### 1. Install required packages
+## Install required packages
 
 Open your terminal and run the following commands to install the necessary packages:
 
@@ -17,7 +17,7 @@ Open your terminal and run the following commands to install the necessary packa
 sudo pacman -Sy python python-pip python-virtualenv postgresql
 ```
 
-### 2. Initialize and activate a virtual environment
+## Initialize and activate a virtual environment
 
 Navigate to your project directory and create a virtual environment using `virtualenv`:
 
@@ -32,7 +32,7 @@ Activate the virtual environment:
 source env/bin/activate
 ```
 
-### 3. Install Django
+## Install Django
 
 Install Django within the virtual environment using pip:
 
@@ -40,9 +40,9 @@ Install Django within the virtual environment using pip:
 pip install django
 ```
 
-### 4. Configure PostgreSQL
+## Configure PostgreSQL
 
-#### Install PostgreSQL
+### Install PostgreSQL
 
 Install PostgreSQL using pacman:
 
@@ -50,7 +50,7 @@ Install PostgreSQL using pacman:
 sudo pacman -Sy postgresql
 ```
 
-#### Initialize the database cluster
+### Initialize the database cluster
 
 
 ```shell
