@@ -57,7 +57,7 @@ sudo pacman -Sy postgresql
 sudo -u postgres initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'
 ```
 
-#### Start and enable the PostgreSQL service
+### Start and enable the PostgreSQL service
 
 
 ```shell
@@ -65,7 +65,7 @@ sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
 
-#### Create a PostgreSQL user and database
+### Create a PostgreSQL user and database
 
 Access the PostgreSQL prompt:
 
@@ -92,7 +92,7 @@ Exit the PostgreSQL prompt:
 \q
 ```
 
-### 5. Configure Django settings
+## Configure Django settings
 
 Open your Django project's settings file (`settings.py`) and update the following settings:
 
@@ -109,7 +109,7 @@ DATABASES = {
 }
 ```
 
-### 6. Run database migrations
+## Run database migrations
 
 Now you can run the initial database migrations:
 
@@ -117,7 +117,7 @@ Now you can run the initial database migrations:
 python manage.py migrate
 ```
 
-### 7. Start the Django development server
+## Start the Django development server
 
 You're all set! Start the Django development server and access your application in your web browser:
 
