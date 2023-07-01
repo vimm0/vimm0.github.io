@@ -4,9 +4,12 @@ title: "Silk stack trace collection"
 date: 2022-01-26 06:00:36 +0545
 categories: django
 ---
+
+## Introduction
 - You might run into condition where default stack trace collection might not be enough from `django-silk`, then you might need to tweak silk package.
 - install [django-silk](https://github.com/jazzband/django-silk#installation), [ipdb](https://github.com/gotcha/ipdb#use)
 
+## Snippet
 ```bash
 Cprofile in Silk
 ================

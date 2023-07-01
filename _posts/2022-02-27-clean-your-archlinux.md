@@ -6,10 +6,10 @@ categories: linux unix
 ---
 
 You can clean your archlinux, with some suitable packages so that your system remain clean.
-> :warning: **Be aware your system might not work properly if not followed properly, so backup first.** Be very careful here!
+>**Be aware your system might not work properly if not followed properly, so backup first.** Be very careful here!
 
 
-### Some useful commands
+## Some useful commands
 ```bash
 1. Clean package cache
 sudo pacman -U /var/cache/pacman/pkg/packagename
