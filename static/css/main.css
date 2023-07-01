@@ -201,3 +201,8 @@ div.col-sm-3 img.profile-avatar {
         margin-top: 30px;
     }
 }
+
+h2 {
+    font-size: 2rem;
+    color: #424242 ;
+}

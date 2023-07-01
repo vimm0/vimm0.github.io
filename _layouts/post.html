@@ -11,6 +11,7 @@ layout: default
     &raquo; {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
   </span>
 {% endif %}
+{% include toc.html content=page.content skip_toc=page.skip_toc%}
 
 <div class="content">
   <div class="post">{{ content }}</div>
@@ -54,7 +55,7 @@ layout: default
   {% endif %}
 </div>
 
-<!--<div class="disqus-comments">-->
+<!-- <div class="disqus-comments">-->
   <!--<div id="disqus_thread"></div>-->
   <!--<script type="text/javascript">-->
     <!--/* <![CDATA[ */-->
@@ -70,4 +71,4 @@ layout: default
     <!--})();-->
     <!--/* ]]> */-->
   <!--</script>-->
-<!--</div>-->
+<!-- </div> -->
