@@ -1,27 +1,58 @@
-    {% assign content = include.content %}
-    {% assign h2_open_start = content | split: "<h2" %}
-    {% assign final_h2_texts = '' | split: '' %}
-    {% assign final_h2_ids = '' | split: '' %}
+{% assign content = include.content %}
+{% assign h2_open_start = content | split: "<h2" %}
+{% assign final_h2_texts = '' | split: '' %}
+{% assign final_h2_ids = '' | split: '' %}
+{% assign final_h3_texts = '' | split: '' %}
+{% assign final_h3_ids = '' | split: '' %}
 
-    {% for h2_possible_open in h2_open_start %}
-        {% assign first_char = h2_possible_open | slice: 1,2 %}
-        {% if first_char == "id" %}
-            {% assign h2_text_start = h2_possible_open | split: ">" %}
-            {% assign h2_text = h2_text_start[1] | split: "</h2" | first %}
-            {% assign final_h2_texts = final_h2_texts | push: h2_text %}
+{% for h2_possible_open in h2_open_start %}
+    {% assign first_char = h2_possible_open | slice: 1,2 %}
+    {% if first_char == "id" %}
+        {% assign h2_text_start = h2_possible_open | split: ">" %}
+        {% assign h2_text = h2_text_start[1] | split: "</h2" | first %}
+        {% assign final_h2_texts = final_h2_texts | push: h2_text %}
 
-            {% assign h2_id = h2_text_start[0] | split: '"' | last %}
-            {% assign final_h2_ids = final_h2_ids | push: h2_id %}
-        {% endif %}
-    {% endfor %}
+        {% assign h2_id = h2_text_start[0] | split: '"' | last %}
+        {% assign final_h2_ids = final_h2_ids | push: h2_id %}
+        
+        {% assign h3_open_start = h2_possible_open | split: "<h3" %}
+        {% assign final_h3_texts_temp = '' | split: '' %}
+        {% assign final_h3_ids_temp = '' | split: '' %}
+        
+        {% for h3_possible_open in h3_open_start %}
+            {% assign first_char_h3 = h3_possible_open | slice: 1,2 %}
+            {% if first_char_h3 == "id" %}
+                {% assign h3_text_start = h3_possible_open | split: ">" %}
+                {% assign h3_text = h3_text_start[1] | split: "</h3" | first %}
+                {% assign final_h3_texts_temp = final_h3_texts_temp | push: h3_text %}
 
-    {% if final_h2_ids.size > 0 %}
-        <div id="table-of-content">
-            {% for h2_text in final_h2_texts %}
-                {% assign index = forloop.index | minus: 1 %}
-                <a href="#{{ final_h2_ids[index] }}">{{ forloop.index }}. {{ h2_text }}</a>
-                <br>
-            {% endfor %}
-        </div>
+                {% assign h3_id = h3_text_start[0] | split: '"' | last %}
+                {% assign final_h3_ids_temp = final_h3_ids_temp | push: h3_id %}
+            {% endif %}
+        {% endfor %}
+        
+        {% assign final_h3_texts = final_h3_texts | push: final_h3_texts_temp %}
+        {% assign final_h3_ids = final_h3_ids | push: final_h3_ids_temp %}
     {% endif %}
-  
+{% endfor %}
+
+{% if final_h2_ids.size > 0 %}
+    <div id="table-of-content">
+        {% for h2_text in final_h2_texts %}
+            {% assign index = forloop.index | minus: 1 %}
+            <a href="#{{ final_h2_ids[index] }}">{{ forloop.index }}. {{ h2_text }}</a>
+            <br>
+            <!-- {{ final_h2_ids[index] }} -->
+            <!-- {{ final_h3_ids[index][0] }} -->
+            {% if final_h3_ids[index].size > 1 %}
+                {% for h3_text in final_h3_texts[index] %}
+                    {% assign h3_index = forloop.index | minus: 1 %}
+                        {% if final_h2_ids[index] != final_h3_ids[index][h3_index] %}
+                            &emsp;<a href="#{{ final_h3_ids[index][h3_index] }}">- {{ h3_text }}</a>
+                            <br>
+                        {% endif %}
+                    {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

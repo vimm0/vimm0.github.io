@@ -13,3 +13,5 @@
     ---
 ```
 3. Add category if not present else skip.
+
+<!-- https://ranvir.xyz/blog/creating-table-of-content-in-jekyll-blog-without-plugin/ -->

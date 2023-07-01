@@ -206,3 +206,18 @@ h2 {
     font-size: 2rem;
     color: #424242 ;
 }
+
+h3 {
+    font-size: 1.8rem;
+    color: #424242 ;
+}
+
+#table-of-content {
+    border: 1px solid #6969694f;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    margin: 1rem 0;
+}
+#table-of-content a{
+    font-size: 1.8rem;
+}
