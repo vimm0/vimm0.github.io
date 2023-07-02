@@ -1,42 +1,106 @@
 [
 	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
-		"image": "placeholder.png",
-		"url": "https://www.google.com",
-		"date": "Jan 2014",
-		"tags": ["Angular JS","API"]
+		"slug": "sis",
+		"name": "Student Information system",
+		"image": "sis.png",
+		"url": "https://ble-m64jf.ondigitalocean.app/",
+		"date": "Jun 2020",
+		"tags": ["Python","Django", "Vue.js"]
 	},
 	{
-		"name": "Cool project 2",
+		"slug": "super-app-flutter",
+		"name": "SuperApp: list, job, commerce",
+		"image": "superapp.png",
+		"url": "https://www.youtube.com/shorts/aDQgsCqqm5A",
+		"date": "Aug 2022",
+		"tags": ["Dart","Flutter", "E-commerce"]
+	},
+	{
+		"slug": "tax-nepal",
+		"name": "Tax Nepal",
 		"image": "placeholder.png",
 		"url": "#",
-		"date": "May 2014",
-		"tags": ["Python","Django"]
+		"date": "Jun 2019",
+		"tags": ["Django","Vue.js", "PWA/TWA"]
 	},
 	{
-		"name": "Cool project 3",
+		"slug": "oms",
+		"name": "OMS",
 		"image": "placeholder.png",
 		"url": "#",
-		"date": "June 2014",
-		"tags": ["HTML","JQuery","Django"]
+		"date": "Mar 2020",
+		"tags": ["Django","Vue.js"]
 	},
 	{
-		"name": "Cool project 4",
+		"slug": "lyrics",
+		"name": "Lyrics Application: PWA",
 		"image": "placeholder.png",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
+		"url": "#",
+		"date": "Jun 2021",
+		"tags": ["Django","Vue.js", "React.js"]
 	},
 	{
-		"name": "Cool project 5",
+		"slug": "akaunt",
+		"name": "Akaunt",
 		"image": "placeholder.png",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
+		"url": "#",
+		"date": "May 2022",
+		"tags": ["Django","Vue.js"]
 	},
 	{
-		"name": "Cool project 6",
+		"slug": "pms",
+		"name": "PMS",
 		"image": "placeholder.png",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
+		"url": "#",
+		"date": "Mar 2021",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "ecommerce",
+		"name": "E-commerce",
+		"image": "placeholder.png",
+		"url": "https://youtu.be/l6pq6PI9KOI",
+		"date": "Jun 2021",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "publication-nepalaya",
+		"name": "Publication Nepalaya",
+		"image": "publication-nepalaya.png",
+		"url": "https://publicationnepalaya.com/",
+		"date": "Oct 2018",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "philately",
+		"name": "Philately",
+		"image": "placeholder.png",
+		"url": "http://ppsmo.gov.np/",
+		"date": "Dec 2016",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "jus-broadcasting",
+		"name": "JusBroadcasting",
+		"image": "jus.png",
+		"url": "#",
+		"date": "Dec 2016",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "payroll-management-system",
+		"name": "Payroll management system",
+		"image": "placeholder.png",
+		"url": "#",
+		"date": "Apr 2016",
+		"tags": ["Django","Vue.js"]
+	},
+	{
+		"slug": "student-progress-evaluation",
+		"name": "Student Progress Evaluation",
+		"image": "placeholder.png",
+		"url": "#",
+		"date": "Jul 2016",
+		"tags": ["Django","Vue.js"]
 	}
 ]
