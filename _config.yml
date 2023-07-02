@@ -1,47 +1,46 @@
 title: Posts
 description: Posts List
-author: Sandesh Rana | Python web developer in Nepal
+author: Sandesh Rana | Python
 github: https://github.com/vimm0
-about: Hello (नमस्ते), I'm developer from Nepal.
+about: Hello (नमस्ते), I'm a developer from Himalayas, a skilled developer with a passion for crafting efficient and elegant code, with creativity and precision.
 #disqus_shortname: techproblems
 google_analytics: UA-123962880-1
 avatar_url: /static/img/github-pic.png
-#
 enableTags: true
 tagarray: []
-#
 collections:
   project:
     output: true
     permalink: /project/:path/
 
 social:
-#    - icon: fa-facebook
-#      link: "#"
+    - icon: fa-github
+      link: "https://github.com/vimm0"
     - icon: fa-twitter
       link: "https://twitter.com/vimm0"
     - icon: fa-linkedin
       link: "https://www.linkedin.com/in/sandesh-rana-12783611a/"
-#    - icon: fa-stack-exchange
+    - icon: fa-stack-overflow
+      link: "https://stackoverflow.com/users/6108201/vimm-rana"
+    - icon: fa-youtube-play
+      link: "https://www.youtube.com/@nepexgroup"
+#    - icon: fa-facebook
 #      link: "#"
-    - icon: fa-github
-      link: "https://github.com/vimm0"
 
 share:
   twitter_username: vimm0
 #  fb_appid: 1749788565247320
-#
+
 urls:
     - text: Home
       url: /
     - text: About Me
       url: /about/
+    - text: My Projects
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
 
-#    - text: My Projects
-#      url: /projects/
-#    - text: XML Feed
-#      url: /feed.xml
-#
 url: "https://vimm0.github.io"
 baseurl: ""
 paginate: 20

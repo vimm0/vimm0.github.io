@@ -213,10 +213,10 @@ h3 {
 }
 
 #table-of-content {
-    border: 1px solid #6969694f;
     border-radius: 1rem;
     padding: 2rem 2rem;
     margin: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 #table-of-content a{
     font-size: 1.8rem;

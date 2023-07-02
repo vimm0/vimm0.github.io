@@ -240,86 +240,88 @@ layout: compress
     {% seo %}
 </head>
 <body>
-<div class="container">
-    <div class="col-sm-3">
-        <div class="fixed-condition">
-            <a href="/"><img class="profile-avatar" src="{{ site.avatar_url }}" height="75px" width="75px"
-                             alt="avatar_url"/></a>
-            <h1 class="author-name">{{ site.author }}</h1>
-            {% if site.about %}
-            <div class="profile-about">
-                {{ site.about }}
-            </div>
-            {% endif %}
-            <div class="social">
-                <ul>
-                    {% for link in site.social %}
-                    <li><a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.icon }}"><i
-                            class="fa {{ link.icon }}" aria-label="{{ link.icon }}"></i></a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="search" id="js-search">
-                <input type="text" placeholder="search posts" aria-label="search posts"
-                       class="search__input form-control" id="js-search__input">
-                <ul class="search__results" id="js-search__results"></ul>
-            </div>
+    <div class="container">
+        <div class="col-sm-3">
+            <div class="fixed-condition">
+                <div class="text-center">
+                    <a href="/"><img class="profile-avatar" src="{{ site.avatar_url }}" height="75px" width="75px"
+                            alt="avatar_url" /></a>
+                </div>
+                {% if site.about %}
+                <div class="profile-about">
+                    <h1 class="author-name">{{ site.author }}</h1>
+                    {{ site.about }}
+                </div>
+                {% endif %}
+                <div class="social">
+                    <ul>
+                        {% for link in site.social %}
+                        <li><a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.icon }}"><i
+                                    class="fa {{ link.icon }}" aria-label="{{ link.icon }}"></i></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="search" id="js-search">
+                    <input type="text" placeholder="search posts" aria-label="search posts"
+                        class="search__input form-control" id="js-search__input">
+                    <ul class="search__results" id="js-search__results"></ul>
+                </div>
             <hr/>
-            <div class="sidebar-nav">
-                <strong>Navigation</strong>
-                {% for i in site.urls %}
-                <a class="about" href="{{ i.url }}">{{ i.text }}</a>
-                {% endfor %}
+                <div class="sidebar-nav">
+                    <strong>Navigation</strong>
+                    {% for i in site.urls %}
+                    <a class="about" href="{{ i.url }}">{{ i.text }}</a>
+                    {% endfor %}
 
+                </div>
             </div>
+            <!-- end /.fixed-condition -->
         </div>
-        <!-- end /.fixed-condition -->
-    </div>
-    <div class="col-sm-8 col-offset-1 main-layout">
-        {{ content }}
-        <footer>
-            <!--&copy; -->
-            {{ site.author }}
-            {% if site.github %}
-            - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by <a
-                href="https://github.com/jekyll">Jekyll</a>.
-            {% endif %}
-            <div class="btn-github" style="float:right;">
+        <div class="col-sm-8 col-offset-1 main-layout">
+            {{ content }}
+            <footer>
+                <!--&copy; -->
+                {{ site.author }}
+                {% if site.github %}
+                - <a href="{{ site.github }}">{{ site.github }}</a> - Powered by <a
+                    href="https://github.com/jekyll">Jekyll</a>.
+                {% endif %}
+                <div class="btn-github" style="float:right;">
                 <iframe src="https://ghbtns.com/github-btn.html?user=vimm0&repo=vimm0.github.io&type=star&count=true"
                         frameborder="0" scrolling="0" width="85" height="20px" title="Github Star"></iframe>
                 <iframe src="https://ghbtns.com/github-btn.html?user=vimm0&repo=vimm0.github.io&type=fork&count=true"
                         frameborder="0" scrolling="0" width="85" height="20px" title="Github Fork"></iframe>
-            </div>
-        </footer>
+                </div>
+            </footer>
+        </div>
+        <!-- end /.col-sm-8 -->
     </div>
-    <!-- end /.col-sm-8 -->
-</div>
-<!-- end /.container -->
+    <!-- end /.container -->
 
-<!-- Bootstrap core JavaScript -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/super-search.js"></script>
-<script src="/static/js/thickbox-compressed.js"></script>
-<script src="/static/js/projects.js"></script>
-<!-- Google Analytics -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/super-search.js"></script>
+    <script src="/static/js/thickbox-compressed.js"></script>
+    <script src="/static/js/projects.js"></script>
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', '{{ site.google_analytics }}', 'auto');
-    ga('send', 'pageview');
-</script>
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>
