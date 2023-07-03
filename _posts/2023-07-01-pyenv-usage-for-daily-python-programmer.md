@@ -88,16 +88,38 @@ By utilizing virtual environments as mentioned earlier, you can create an isolat
 
 | Command                               | Description                                                                                      |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `pyenv install <version>`             | Install a specific Python version.                                                               |
-| `pyenv versions`                      | List all installed Python versions.                                                              |
-| `pyenv global <version>`              | Set the global Python version to be used in the system.                                          |
-| `pyenv local <version>`               | Set the Python version for the current directory or project.                                     |
-| `pyenv shell <version>`               | Set the Python version for the current shell session.                                            |
-| `pyenv virtualenv <version> <env_name>` | Create a new virtual environment using a specific Python version.                                |
 | `pyenv activate <env_name>`           | Activate a specific virtual environment.                                                         |
+| `pyenv commands`                      | List all available pyenv commands.                                                               |
+| `pyenv completions`                   | Display shell completion scripts for pyenv.                                                      |
 | `pyenv deactivate`                    | Deactivate the currently active virtual environment.                                             |
-| `pyenv uninstall <version>`           | Uninstall a specific Python version.                                                             |
+| `pyenv exec <command>`                | Run an executable with the selected Python version.                                              |
+| `pyenv global <version>`              | Set the global Python version to be used in the system.                                          |
+| `pyenv help`                          | Display help information about pyenv.                                                            |
+| `pyenv hooks`                         | List available pyenv hooks.                                                                      |
+| `pyenv init`                          | Set up the shell environment for pyenv.                                                          |
+| `pyenv install <version>`             | Install a specific Python version.                                                               |
+| `pyenv latest`                        | Show the latest available version of Python.                                                     |
+| `pyenv local <version>`               | Set the Python version for the current directory or project.                                     |
+| `pyenv prefix`                        | Display the path to the pyenv installation.                                                      |
 | `pyenv rehash`                        | Rehash the shims after installing new Python executables or packages.                            |
+| `pyenv root`                          | Display the root directory of pyenv.                                                             |
+| `pyenv shell <version>`               | Set the Python version for the current shell session.                                            |
+| `pyenv shims`                         | Display the path to the shims directory.                                                         |
+| `pyenv uninstall <version>`           | Uninstall a specific Python version.                                                             |
+| `pyenv --version`                     | Display the pyenv version.                                                                       |
+| `pyenv version`                       | Display the currently active Python version.                                                     |
+| `pyenv version-file`                  | Display the path to the file used to store the version.                                           |
+| `pyenv version-file-read`             | Read the content of the version file.                                                            |
+| `pyenv version-file-write`            | Write the provided content to the version file.                                                  |
+| `pyenv version-name`                  | Display the name of the currently active Python version.                                         |
+| `pyenv version-origin`                | Display the source of the currently active Python version.                                       |
+| `pyenv versions`                      | List all installed Python versions.                                                              |
+| `pyenv virtualenv <version> <env_name>` | Create a new virtual environment using a specific Python version.                                |
+| `pyenv virtualenv-delete <env_name>`  | Delete a specific virtual environment.                                                           |
+| `pyenv virtualenv-init`               | Initialize the virtualenv plugin for pyenv.                                                      |
+| `pyenv virtualenv-prefix`             | Display the path to the virtualenv directory.                                                    |
+| `pyenv virtualenvs`                   | List all available virtual environments.                                                         |
+| `pyenv whence <command>`              | Display the full path to an executable.                                                          |
 | `pyenv which <command>`               | Show the full path to the executable of a specific command.                                      |
 
 
