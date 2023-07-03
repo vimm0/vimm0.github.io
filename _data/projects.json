@@ -18,7 +18,7 @@
 	{
 		"slug": "tax-nepal",
 		"name": "Tax Nepal",
-		"image": "placeholder.png",
+		"image": "taxnepal.png",
 		"url": "#",
 		"date": "Jun 2019",
 		"tags": ["Django","Vue.js", "PWA/TWA"]
