@@ -84,6 +84,23 @@ By utilizing virtual environments as mentioned earlier, you can create an isolat
 
  its dependencies separately. This approach promotes reproducibility and avoids conflicts between different projects.
 
+## Commands
+
+| Command                               | Description                                                                                      |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `pyenv install <version>`             | Install a specific Python version.                                                               |
+| `pyenv versions`                      | List all installed Python versions.                                                              |
+| `pyenv global <version>`              | Set the global Python version to be used in the system.                                          |
+| `pyenv local <version>`               | Set the Python version for the current directory or project.                                     |
+| `pyenv shell <version>`               | Set the Python version for the current shell session.                                            |
+| `pyenv virtualenv <version> <env_name>` | Create a new virtual environment using a specific Python version.                                |
+| `pyenv activate <env_name>`           | Activate a specific virtual environment.                                                         |
+| `pyenv deactivate`                    | Deactivate the currently active virtual environment.                                             |
+| `pyenv uninstall <version>`           | Uninstall a specific Python version.                                                             |
+| `pyenv rehash`                        | Rehash the shims after installing new Python executables or packages.                            |
+| `pyenv which <command>`               | Show the full path to the executable of a specific command.                                      |
+
+
 ## Conclusion
 
 `pyenv` is a powerful tool that simplifies Python version management and dependency isolation for Python programmers. By effortlessly switching between different Python versions and creating virtual environments, you can work on diverse projects without worrying about compatibility issues or dependency conflicts.

@@ -221,3 +221,12 @@ h3 {
 #table-of-content a{
     font-size: 1.8rem;
 }
+
+table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #969394;
+    padding-left: 1rem; 
+  }
