@@ -110,5 +110,5 @@ This ultimate Vim cheat sheet covers a wide range of essential commands and shor
 
 Happy Vimming!
 
-### Reference
+## Reference
 - [Vim FAQs](https://vimhelp.org/vim_faq.txt.html)
