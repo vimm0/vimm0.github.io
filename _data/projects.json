@@ -58,7 +58,7 @@
 	{
 		"slug": "ecommerce",
 		"name": "E-commerce",
-		"image": "placeholder.png",
+		"image": "bazaar/4.jpg",
 		"url": "https://youtu.be/l6pq6PI9KOI",
 		"date": "Jun 2021",
 		"tags": ["Django","Vue.js"]
