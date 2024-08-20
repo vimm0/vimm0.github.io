@@ -122,4 +122,4 @@ Many problems in competitive programming involve mathematical reasoning.
 - **Game Theory**:
   - Concepts like Nim game, Grundy numbers, and Minimax algorithm.
 
-Websites: Codeforces, CodeChef, LeetCode, AtCoder, etc.
+Websites: [Codeforces](https://codeforces.com/), [CodeChef](https://www.codechef.com/), [LeetCode](https://leetcode.com/), [AtCoder](https://atcoder.jp/), [HackerRank](https://www.hackerrank.com/) etc.
