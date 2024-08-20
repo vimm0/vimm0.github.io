@@ -13,8 +13,8 @@ Competitive programming requires a strong foundation in algorithms, data structu
 
 Understanding and implementing various data structures is crucial for solving problems efficiently.
 
-- **Arrays and Strings**: Basic operations, traversals, and manipulations.
-- **Linked Lists**: Single, double, circular lists, and operations like insertion and deletion.
+- [**Arrays and Strings**](./2024-08-20-array-and-strings.md): Basic operations, traversals, and manipulations.
+- [**Linked Lists**](./2024-08-20-linked-list.md): Single, double, circular lists, and operations like insertion and deletion.
 - **Stacks and Queues**: LIFO and FIFO principles, use cases like expression evaluation and scheduling.
 - **Trees**:
   - **Binary Trees**: Traversals (in-order, pre-order, post-order), height, and diameter.
