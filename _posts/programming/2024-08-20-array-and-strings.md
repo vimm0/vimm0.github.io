@@ -2,7 +2,8 @@
 layout: post
 title: "Array and Strings"
 date: 2024-08-20 19:40:36 +0545
-categories: programming
+hide: true
+categories: programming datastructure
 ---
 
 ## Arrays and Strings: Easy to Hard Problems

@@ -13,14 +13,14 @@ Competitive programming requires a strong foundation in algorithms, data structu
 
 Understanding and implementing various data structures is crucial for solving problems efficiently.
 
-- [**Arrays and Strings**](https://vimm0.github.io/programming/2024/08/20/array-and-strings.html): Basic operations, traversals, and manipulations.
-- [**Linked Lists**](https://vimm0.github.io/programming/2024/08/20/linked-list.html): Single, double, circular lists, and operations like insertion and deletion.
-- **Stacks and Queues**: LIFO and FIFO principles, use cases like expression evaluation and scheduling.
+- [**Arrays and Strings**](/programming/2024-08-20-array-and-strings.md): Basic operations, traversals, and manipulations.
+- [**Linked Lists**](/programming/2024-08-20-linked-list.md): Single, double, circular lists, and operations like insertion and deletion.
+- [**Stacks and Queues**](/programming/2024-08-20-stack-queue.md): LIFO and FIFO principles, use cases like expression evaluation and scheduling.
 - **Trees**:
-  - **Binary Trees**: Traversals (in-order, pre-order, post-order), height, and diameter.
-  - **Binary Search Trees (BST)**: Insertion, deletion, search, and balancing (AVL trees).
-  - **Heaps**: Min-heap, max-heap, and priority queues.
-  - **Trie**: Efficient information retrieval, especially useful for problems involving strings.
+  - [**Binary Trees**](/programming/2024-08-20-binary-tree.md): Traversals (in-order, pre-order, post-order), height, and diameter.
+  - [**Binary Search Trees (BST)**](/programming/2024-08-20-binary-search-tree.md): Insertion, deletion, search, and balancing (AVL trees).
+  - [**Heaps**](/programming/2024-08-20-heap.md): Min-heap, max-heap, and priority queues.
+  - [**Trie**](/programming/2024-08-20-trie.md): Efficient information retrieval, especially useful for problems involving strings.
 - **Graphs**:
   - **Representation**: Adjacency matrix, adjacency list.
   - **Traversal algorithms**: BFS, DFS.

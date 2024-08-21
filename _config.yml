@@ -9,6 +9,9 @@ avatar_url: /static/img/github-pic.png
 enableTags: true
 tagarray: []
 collections:
+  programming:
+    output: true
+    permalink: /programming/:path/
   project:
     output: true
     permalink: /project/:path/
@@ -51,7 +54,12 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
+  - jekyll-relative-links
 
+relative_links:
+  enabled: true
+  collections: true
+  
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

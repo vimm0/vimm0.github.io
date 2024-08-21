@@ -2,7 +2,8 @@
 layout: post
 title: "Linked List"
 date: 2024-08-20 19:50:36 +0545
-categories: programming
+hide: true
+categories: programming datastructure
 ---
 
 ## Linked List: Easy to Hard Problems
