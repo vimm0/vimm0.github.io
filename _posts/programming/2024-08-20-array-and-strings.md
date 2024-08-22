@@ -2,7 +2,7 @@
 layout: post
 title: "Array and Strings"
 date: 2024-08-20 19:40:36 +0545
-hide: true
+hidden: true
 categories: programming datastructure
 ---
 

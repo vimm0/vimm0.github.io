@@ -22,44 +22,44 @@ Understanding and implementing various data structures is crucial for solving pr
   - [**Heaps**](/programming/2024-08-20-heap.md): Min-heap, max-heap, and priority queues.
   - [**Trie**](/programming/2024-08-20-trie.md): Efficient information retrieval, especially useful for problems involving strings.
 - **Graphs**:
-  - **Representation**: Adjacency matrix, adjacency list.
-  - **Traversal algorithms**: BFS, DFS.
-  - **Shortest path algorithms**: Dijkstra, Bellman-Ford, Floyd-Warshall.
-  - **Minimum Spanning Tree (MST)**: Prim's and Kruskal's algorithms.
-  - **Topological Sorting**: Directed Acyclic Graph (DAG) processing.
-- **Hashing**: Hash tables, collision resolution techniques.
-- **Disjoint Set (Union-Find)**: Efficiently manage and merge sets, useful in MST and connectivity problems.
+  - [**Representation**](./programming/2024-08-21-graph-representation.md): Adjacency matrix, adjacency list.
+  - [**Traversal algorithms**](./programming/2024-08-21-graph-traversal.md): BFS, DFS.
+  - [**Shortest path algorithms**](./programming/2024-08-21-graph-shortest-path.md): Dijkstra, Bellman-Ford, Floyd-Warshall.
+  - [**Minimum Spanning Tree (MST)**](./programming/2024-08-21-minimum-spanning-tree.md): Prim's and Kruskal's algorithms.
+  - [**Topological Sorting**](./programming/2024-08-21-topolocical-sorting.md): Directed Acyclic Graph (DAG) processing.
+- [**Hashing**](./programming/2024-08-21-hashing.md): Hash tables, collision resolution techniques.
+- [**Disjoint Set (Union-Find)**](./programming/2024-08-21-disjoint-set.md): Efficiently manage and merge sets, useful in MST and connectivity problems.
 
 ### 2. Algorithms
 
 Knowing key algorithms and understanding when and how to apply them is critical.
 
-- **Sorting and Searching**:
+- [**Sorting and Searching**](./programming/2024-08-21-searching-sorting.md):
   - Basic Sorting: Bubble, Selection, Insertion.
   - Advanced Sorting: Merge sort, Quick sort, Heap sort, Counting sort.
   - Binary Search: Implementation, applications, and variations (lower bound, upper bound).
-- **Greedy Algorithms**:
+- [**Greedy Algorithms**](./programming/2024-08-21-greedy-algorithm.md):
   - Greedy choice property and optimal substructure.
   - Problems like activity selection, coin change, fractional knapsack.
-- **Dynamic Programming (DP)**:
+- [**Dynamic Programming (DP)**](./programming/2024-08-21-dynamic-programming.md):
   - Memoization vs. tabulation.
   - Classical DP problems: Fibonacci, knapsack, longest common subsequence.
   - State and transition formulation.
-- **Backtracking**:
+- [**Backtracking**](./programming/2024-08-21-backtracking.md):
   - Problems like n-queens, subset sum, permutation generation.
   - Understanding pruning and constraints handling.
-- **Divide and Conquer**:
+- [**Divide and Conquer**](./programming/2024-08-21-divide-and-conquer.md):
   - Applications in sorting, searching, and matrix multiplication.
   - Problems like maximum subarray sum (Kadane’s algorithm).
-- **Number Theory**:
+- [**Number Theory**](./programming/2024-08-21-number-theory.md):
   - Prime numbers, Sieve of Eratosthenes.
   - GCD, LCM, Euclidean algorithm.
   - Modular arithmetic, fast exponentiation.
   - Chinese remainder theorem.
-- **Bit Manipulation**:
+- [**Bit Manipulation**](./programming/2024-08-21-bit-manipulation.md):
   - Basic operations: AND, OR, XOR, NOT, shifts.
   - Problems involving bitwise operations, like finding subsets or checking for power of two.
-- **Combinatorics**:
+- [**Combinatorics**](./programming/2024-08-21-combinatorics.md):
   - Permutations and combinations.
   - Pigeonhole principle, inclusion-exclusion principle.
   - Catalan numbers, binomial coefficients.
@@ -68,14 +68,14 @@ Knowing key algorithms and understanding when and how to apply them is critical.
 
 Many problems in competitive programming involve mathematical reasoning.
 
-- **Basic Mathematics**:
+- [**Basic Mathematics**](./programming/2024-08-21-basic-math.md):
   - Arithmetic, algebra, geometry, and trigonometry.
   - Probability and statistics basics for randomized algorithms.
-- **Geometry**:
+- [**Geometry**](./programming/2024-08-21-geometry.md):
   - Convex hull, line intersection, point in polygon.
   - Area and perimeter calculations, distances.
   - Computational geometry concepts like sweep line, line segments intersection.
-- **Graph Theory**:
+- [**Graph Theory**](./programming/2024-08-21-graph-theory.md):
   - Eulerian and Hamiltonian paths.
   - Strongly connected components (Tarjan’s algorithm).
   - Network flow (Ford-Fulkerson, Edmonds-Karp).

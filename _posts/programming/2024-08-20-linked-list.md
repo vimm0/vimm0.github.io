@@ -2,7 +2,7 @@
 layout: post
 title: "Linked List"
 date: 2024-08-20 19:50:36 +0545
-hide: true
+hidden: true
 categories: programming datastructure
 ---
 

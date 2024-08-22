@@ -8,13 +8,14 @@ layout: default
 
   <ol class="posts">
     {% for post in paginator.posts %}
-      {% if post.hide == null or post.hide == false %}
+      {% if post.hidden == null or post.hidden == false %}
         <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <span style="font-size: 1.5rem;">{{ post.date | date_to_string }}</span></li>
       {% endif %}
 
       {% endfor %}
   </ol>
-
+<!-- {{ paginator }} -->
+<!-- {{ paginator.posts.hide }} -->
   <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
     <ul class="pagination pagination-sm">
