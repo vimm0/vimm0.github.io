@@ -35,35 +35,34 @@ To run a Flutter app from VSCode on different devices (Android Emulator, Physica
        - **Physical Android/iOS Device:** Replace `127.0.0.1` with your machine's IP address.
 
 ### 3. **Running on Devices**
+  - ##### A. **Android Emulator**
+    - **Start the Emulator:**
+      - Open the VSCode terminal and start the Android emulator using AVD Manager or command:
+        ```bash
+        emulator -avd <emulator_name>
+        ```
+      - Alternatively, you can start it from VSCode by clicking the device selector on the bottom status bar.
+    - **Run the Flutter App:**
+      - In VSCode, open the Flutter project.
+      - Press `F5` or use the "Run" menu and select "Start Debugging" to launch the app in the emulator.
 
-  #### A. **Android Emulator**
-  - **Start the Emulator:**
-    - Open the VSCode terminal and start the Android emulator using AVD Manager or command:
-      ```bash
-      emulator -avd <emulator_name>
-      ```
-    - Alternatively, you can start it from VSCode by clicking the device selector on the bottom status bar.
-  - **Run the Flutter App:**
-    - In VSCode, open the Flutter project.
-    - Press `F5` or use the "Run" menu and select "Start Debugging" to launch the app in the emulator.
+  - ##### B. **Physical Android Device**
+    - **Enable Developer Mode and USB Debugging:**
+      - On your Android phone, enable Developer Options and USB Debugging.
+    - **Connect the Device:**
+      - Connect the phone to your Linux machine via USB.
+    - **Run the Flutter App:**
+      - In VSCode, select your device from the device selector at the bottom.
+      - Press `F5` or start debugging.
 
-  #### B. **Physical Android Device**
-  - **Enable Developer Mode and USB Debugging:**
-    - On your Android phone, enable Developer Options and USB Debugging.
-  - **Connect the Device:**
-    - Connect the phone to your Linux machine via USB.
-  - **Run the Flutter App:**
-    - In VSCode, select your device from the device selector at the bottom.
-    - Press `F5` or start debugging.
-
-  #### C. **Physical iOS Device**
-  - **Connect the iPhone:**
-    - Connect your iPhone to your Linux machine via USB.
-  - **Start the App:**
-    - Ensure that your iPhone is trusted and developer mode is enabled.
-    - In VSCode, select your iPhone from the device list.
-    - Press `F5` to run the app.
-    - Note: On Linux, you may need a Mac for building and deploying to an iOS device due to Xcode requirements.
+  - ##### C. **Physical iOS Device**
+    - **Connect the iPhone:**
+      - Connect your iPhone to your Linux machine via USB.
+    - **Start the App:**
+      - Ensure that your iPhone is trusted and developer mode is enabled.
+      - In VSCode, select your iPhone from the device list.
+      - Press `F5` to run the app.
+      - Note: On Linux, you may need a Mac for building and deploying to an iOS device due to Xcode requirements.
 
 ### 4. **Port Details**
    - **Django Backend:** Default is `8000`, but can be changed to any port.
