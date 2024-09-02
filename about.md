@@ -12,7 +12,7 @@ I'm willing to assist you (in free time) with various aspects of your project, r
 
 ##### Skills
 - Languages: JavaScript<sub>[1](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [2](https://www.ecma-international.org/publications/standards/Ecma-262.htm)</sub>, [Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html), [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), CSS/CSS3 (Sass) <sub>[1](https://developer.mozilla.org/en-US/docs/Web/CSS), [2](https://sass-lang.com/)</sub>, SQL<sub>[1](https://www.w3schools.com/sql/), [2](https://developer.mozilla.org/en-US/docs/Web/SQL)</sub>, Java <sub>[1](https://docs.oracle.com/en/java/), [2](https://www.tutorialspoint.com/java/index.htm)</sub>, Python <sub>[1](https://docs.python.org/), [2](https://www.tutorialspoint.com/python/index.htm)</sub>, C++ <sub>[1](https://en.cppreference.com/w/), [2](https://www.geeksforgeeks.org/c-plus-plus/)</sub>, [Dart](https://dart.dev/guides)
-- Operating Systems: Linux, Windows
+- Operating Systems: Linux, Windows, OSX (mac)
 - Database Systems: PostgreSQL<sub>[1](https://www.postgresql.org/), [2](https://www.postgresql.org/docs/)</sub>, MongoDB<sub>[1](https://www.mongodb.com/), [2](https://docs.mongodb.com/)</sub>, MySQL <sub>[1](https://www.mysql.com/), [2](https://dev.mysql.com/doc/)</sub>, SQLite <sub>[1](https://www.sqlite.org/index.html), [2](https://www.sqlite.org/docs.html)</sub>
 - Text Editor: [Sublime](https://www.sublimetext.com/), [Visual Studio Code](https://code.visualstudio.com/), [Vim](https://www.vim.org/), [Nano](https://www.nano-editor.org/)
 - Version Control Systems: [GIT](https://git-scm.com/)
