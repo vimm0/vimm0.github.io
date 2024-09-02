@@ -36,7 +36,7 @@ Note: The above list includes various technologies, tools, and frameworks used i
 B.Sc. Computer Science and Information Technology under [Tribhuvan University](https://tribhuvan-university.edu.np/)
 
 ##### Contact:
-Email: [admin@admin.com](admin@admin.com)
+Email: [nepexgroup@gmail.com](nepexgroup@gmail.com)
 
 ##### Company:
 [Nepex Group](https://www.nepexgroup.com/)
