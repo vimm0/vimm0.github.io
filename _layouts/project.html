@@ -23,8 +23,8 @@ layout: default
       {% for i in site.data.projects %}
       <div class="project-item project-outer" data-tags='{{ i.tags | jsonify | downcase }}'>
         <div class="project-inner">
-          <a href="/static/projects/{{ i.image }}" class="thickbox">
-            <div class="project-img bordered" style="background-image: url('/static/projects/{{ i.image }}');"></div>
+          <a href="/static/projects/{{ i.image }}" target="_blank" rel="noopener">
+            <div class="project-img" style="background-image: url('/static/projects/{{ i.image }}');"></div>
           </a>
           {% assign p_url = nil %}
           {% for pr in p_array %}
@@ -53,7 +53,7 @@ layout: default
           </div>
           <div class="project-footer">
             {% if i.url %}
-              <a href="{{ i.url }}" class="project-link" target="_blank"><i class="fa fa-globe"></i> View</a>
+              <a href="{{ i.url }}" class="project-link" target="_blank">View →</a>
             {% endif %}
             <span class="project-timeline">{{ i.date }}</span>
           </div>

@@ -1,3 +1,5 @@
+# Minimal custom theme (static/css/theme.css)
+
 title: Posts
 description: Posts List
 author: Sandesh Rana | Python
@@ -16,15 +18,15 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-github
+    - text: GitHub
       link: "https://github.com/vimm0"
-    - icon: fa-twitter
+    - text: Twitter
       link: "https://twitter.com/vimm0"
-    - icon: fa-linkedin
+    - text: LinkedIn
       link: "https://www.linkedin.com/in/sandesh-rana-12783611a/"
-    - icon: fa-stack-overflow
+    - text: Stack Overflow
       link: "https://stackoverflow.com/users/6108201/vimm-rana"
-    - icon: fa-youtube-play
+    - text: YouTube
       link: "https://www.youtube.com/@nepexgroup"
 
 share:

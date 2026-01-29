@@ -17,8 +17,8 @@ layout: default
   <div class="content">
     {% for project in site.data.projects %}
       {% if project.slug == page.slug %}
-        <a href="/static/projects/{{ project.image }}" class="thickbox">
-          <img src="/static/projects/{{ project.image }}" alt="{{ page.title }}" title="{{ page.title }}">
+        <a href="/static/projects/{{ project.image }}" target="_blank" rel="noopener">
+          <img src="/static/projects/{{ project.image }}" alt="{{ page.title }}" title="{{ page.title }}" class="project-img-single">
         </a>
       {% endif %}
     {% endfor %}
