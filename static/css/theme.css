@@ -402,42 +402,64 @@ span.categories {
 /* Projects */
 .projects {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
+
+.projects #tag-filter,
+.projects .tag-group {
+  grid-column: 1 / -1;
+}
+
 .project-item {
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
+
 .project-item:last-child {
   border-bottom: 0;
 }
+
+.project-item hr {
+  display: none;
+}
+
 .project-img {
   width: 100%;
-  max-width: 20rem;
   height: 10rem;
   background-size: cover;
   background-position: center;
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
+
 .project-headlines {
   font-size: 1.1rem;
   margin: 0.25rem 0;
 }
+
 .project-footer {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
 }
+
 .project-link {
   margin-right: 1rem;
 }
+
 .tag-holder,
 .tag-holder .tags {
   margin: 0.25rem 0.25rem 0 0;
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Category page */
