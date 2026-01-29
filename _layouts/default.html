@@ -30,6 +30,10 @@ layout: compress
                 <a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.text }}">{{ link.text }}</a>
                 {% endfor %}
             </div>
+            <div class="site-search" id="js-search">
+                <input type="search" id="js-search__input" class="site-search__input" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
+                <ul class="site-search__results" id="js-search__results" aria-live="polite"></ul>
+            </div>
             <nav>
                 <ul class="site-nav">
                     {% for i in site.urls %}
@@ -38,6 +42,14 @@ layout: compress
                 </ul>
             </nav>
         </aside>
+        <script>
+            window.__SEARCH_POSTS__ = [
+                {% for post in site.posts %}
+                { "title": {{ post.title | jsonify }}, "url": {{ post.url | absolute_url | jsonify }}, "date": {{ post.date | date_to_xmlschema | jsonify }}, "excerpt": {{ post.excerpt | default: post.content | strip_html | truncatewords: 30 | jsonify }} }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ];
+        </script>
+        <script src="{{ '/static/js/search.js' | prepend: site.baseurl }}"></script>
 
         <main class="site-main">
             {{ content }}
