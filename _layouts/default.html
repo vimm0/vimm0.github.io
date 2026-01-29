@@ -30,10 +30,6 @@ layout: compress
                 <a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.text }}">{{ link.text }}</a>
                 {% endfor %}
             </div>
-            <div class="site-search" id="js-search">
-                <input type="search" id="js-search__input" class="site-search__input" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
-                <ul class="site-search__results" id="js-search__results" aria-live="polite"></ul>
-            </div>
             <nav>
                 <ul class="site-nav">
                     {% for i in site.urls %}
@@ -41,6 +37,11 @@ layout: compress
                     {% endfor %}
                 </ul>
             </nav>
+            <div class="site-search" id="js-search">
+                <input type="search" id="js-search__input" class="site-search__input" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
+                <ul class="site-search__results" id="js-search__results" aria-live="polite"></ul>
+            </div>
+           
         </aside>
         <script>
             window.__SEARCH_POSTS__ = [
