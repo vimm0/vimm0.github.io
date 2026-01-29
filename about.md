@@ -2,6 +2,7 @@
 layout: page
 title: About Me
 permalink: /about/
+description: Sandesh Rana – developer from the Himalayas. 8+ years in software development, Python, JavaScript, web and mobile.
 ---
 
 Hello (नमस्ते), I am Sandesh Rana, developer from top of the world. [Turing Profile](https://matching.turing.com/developer-resume-preview/dae61b3c73a38ab1c6e23c8713daebf39899a11d3439)

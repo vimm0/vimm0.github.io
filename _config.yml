@@ -1,12 +1,19 @@
 # Minimal custom theme (static/css/theme.css)
 
-title: Posts
-description: Posts List
-author: Sandesh Rana | Python
+title: Sandesh Rana | Blog
+tagline: Developer from the Himalayas – Python, web & mobile
+description: Blog and projects by Sandesh Rana. Posts on Python, Django, Linux, Flutter, and software development.
+author: Sandesh Rana
 github: https://github.com/vimm0
 about: I'm a developer from Himalayas, with a passion for crafting efficient and elegant code, with creativity and precision.
 google_analytics: UA-123962880-1
 avatar_url: /static/img/github-pic.png
+
+# SEO (jekyll-seo-tag): logo for og:image and JSON-LD publisher
+logo: /static/img/github-pic.png
+twitter:
+  username: vimm0
+  card: summary
 enableTags: true
 tagarray: []
 collections:
@@ -52,6 +59,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-relative-links
 
 relative_links:
