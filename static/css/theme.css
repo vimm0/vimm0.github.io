@@ -317,15 +317,21 @@ span.categories {
 }
 
 #table-of-content {
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
   background: #f8fafc;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 #table-of-content a {
   display: block;
-  padding: 0.2rem 0;
+  padding: 0.05rem 0;
+  text-decoration: none;
+  color: var(--text);
+}
+#table-of-content a:hover {
+  color: var(--link);
 }
 
 .PageNavigation {
