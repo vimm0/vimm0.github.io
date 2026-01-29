@@ -55,9 +55,18 @@ h3 { font-size: 1.1rem; }
 }
 
 .site-sidebar {
-  margin-bottom:0;
-  /* padding-bottom: 1rem; */
-  /* border-bottom: 1px solid var(--border); */
+  margin-bottom: 0;
+}
+
+.site-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.site-avatar-link {
+  flex-shrink: 0;
 }
 
 .site-avatar {
@@ -65,19 +74,34 @@ h3 { font-size: 1.1rem; }
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  margin-bottom: 0.75rem;
+  margin: 0;
+}
+
+.site-profile-text {
+  min-width: 0;
+  flex: 1;
 }
 
 .site-author {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.2rem 0;
+}
+
+.site-author a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-author a:hover {
+  color: var(--link);
 }
 
 .site-about {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .site-nav {

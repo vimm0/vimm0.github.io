@@ -20,11 +20,15 @@ layout: compress
 <body>
     <div class="site-wrap">
         <aside class="site-sidebar">
-            <a href="/"><img class="site-avatar" src="{{ site.avatar_url }}" alt="{{ site.author }}" width="64" height="64"></a>
-            {% if site.about %}
-            <h1 class="site-author">{{ site.author }}</h1>
-            <div class="site-about">{{ site.about }}</div>
-            {% endif %}
+            <div class="site-profile">
+                <a href="/" class="site-avatar-link"><img class="site-avatar" src="{{ site.avatar_url }}" alt="{{ site.author }}" width="64" height="64"></a>
+                {% if site.about %}
+                <div class="site-profile-text">
+                    <h1 class="site-author"><a href="/">{{ site.author }}</a></h1>
+                    <div class="site-about">{{ site.about }}</div>
+                </div>
+                {% endif %}
+            </div>
             <div class="site-social">
                 {% for link in site.social %}
                 <a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.text }}">{{ link.text }}</a>
