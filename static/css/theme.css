@@ -57,7 +57,7 @@ h3 { font-size: 1.1rem; }
 .site-sidebar {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
 }
 
 .site-avatar {
@@ -84,15 +84,26 @@ h3 { font-size: 1.1rem; }
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.site-nav a {
-  display: block;
-  padding: 0.2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.25rem;
   font-size: 0.95rem;
 }
+.site-nav li {
+  display: inline-flex;
+  align-items: center;
+}
+.site-nav li + li::before {
+  content: " – ";
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+.site-nav a {
+  padding: 0.2rem 0;
+}
 .site-nav a::before {
-  content: "→ ";
-  opacity: 0.6;
+  content: none;
 }
 
 .site-social {
