@@ -498,3 +498,16 @@ span.categories {
   padding: 0.4rem 0;
   border-bottom: 1px solid var(--border);
 }
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--link);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
