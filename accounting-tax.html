@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nepal Accounting Software — Feature Map</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --font-sans: system-ui, -apple-system, sans-serif;
+      --color-text-primary: #1a1a18;
+      --color-text-secondary: #5f5e5a;
+      --color-background-secondary: #f4f2eb;
+      --color-border-tertiary: rgba(0,0,0,0.1);
+      --color-border-secondary: rgba(0,0,0,0.18);
+      --color-border-primary: rgba(0,0,0,0.28);
+      --border-radius-lg: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-text-primary: #e8e6de;
+        --color-text-secondary: #9c9a92;
+        --color-background-secondary: #2c2c2a;
+        --color-border-tertiary: rgba(255,255,255,0.08);
+        --color-border-secondary: rgba(255,255,255,0.15);
+        --color-border-primary: rgba(255,255,255,0.25);
+      }
+      body { background: #1a1a18; }
+    }
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text-primary);
+      padding: 24px 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 20px; font-weight: 500; margin-bottom: 4px; }
+    .subtitle { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 20px; }
+    .summary-bar { display: flex; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+    .stat-lbl { font-size: 11px; color: var(--color-text-secondary); }
+    .phase-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .tab { padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; border: 1.5px solid var(--color-border-secondary); color: var(--color-text-secondary); background: transparent; transition: all .18s; font-family: var(--font-sans); }
+    .tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); font-weight: 500; }
+    .modules { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 580px) { .modules { grid-template-columns: 1fr; } }
+    .module { border: 1px solid var(--color-border-tertiary); border-radius: 12px; overflow: hidden; }
+    .mod-head { padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
+    .mod-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .mod-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+    .mod-badge { font-size: 11px; padding: 2px 7px; border-radius: 10px; margin-left: auto; font-weight: 500; white-space: nowrap; }
+    .badge-p1 { background: #EAF3DE; color: #3B6D11; }
+    .badge-p2 { background: #FAEEDA; color: #854F0B; }
+    .badge-p3 { background: #E6F1FB; color: #185FA5; }
+    @media (prefers-color-scheme: dark) {
+      .badge-p1 { background: #27500A; color: #C0DD97; }
+      .badge-p2 { background: #633806; color: #FAC775; }
+      .badge-p3 { background: #0C447C; color: #B5D4F4; }
+    }
+    .mod-features { padding: 0 14px 12px; }
+    .feature { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-top: 1px solid var(--color-border-tertiary); }
+    .feature:first-child { border-top: none; }
+    .f-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+    .f-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.4; }
+    .f-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+    .legal-tag { display: inline-block; font-size: 10px; padding: 1px 5px; border-radius: 4px; margin-left: 4px; background: #FCEBEB; color: #A32D2D; font-weight: 500; vertical-align: middle; }
+    @media (prefers-color-scheme: dark) { .legal-tag { background: #501313; color: #F7C1C1; } }
+  </style>
+</head>
+<body>
+  <h1>Nepal Accounting Software — Feature Map</h1>
+  <p class="subtitle">IRD-compliant modules across 3 implementation phases</p>
+
+  <div class="summary-bar">
+    <div class="stat"><div class="stat-num">12</div><div class="stat-lbl">Modules</div></div>
+    <div class="stat"><div class="stat-num">60+</div><div class="stat-lbl">Features</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Phases</div></div>
+    <div class="stat"><div class="stat-num">IRD</div><div class="stat-lbl">Compliant</div></div>
+  </div>
+
+  <div class="phase-tabs">
+    <button class="tab active" onclick="filter('all', this)">All modules</button>
+    <button class="tab" onclick="filter('p1', this)">Phase 1 — Core</button>
+    <button class="tab" onclick="filter('p2', this)">Phase 2 — Advanced</button>
+    <button class="tab" onclick="filter('p3', this)">Phase 3 — Extended</button>
+  </div>
+
+  <div class="modules" id="grid"></div>
+
+  <script>
+    const modules = [
+      {
+        title: "VAT Management", icon: "🧾", phase: "p1",
+        color: "#639922", dotColor: "#639922",
+        features: [
+          { t: "13% VAT on sales & purchases", s: "Auto-calculation on invoices & bills", legal: true },
+          { t: "VAT input / output ledger", s: "Separate tracking of VAT collected vs paid" },
+          { t: "VAT exempt & zero-rated items", s: "Handles mixed VAT scenarios" },
+          { t: "Reverse charge mechanism", s: "For imports & specified services", legal: true },
+          { t: "VAT 3-column purchase/sales book", s: "IRD-mandated format — auto-generated", legal: true },
+          { t: "VAT return (VAT-09)", s: "Monthly/quarterly filing report", legal: true },
+        ]
+      },
+      {
+        title: "TDS (Tax Deducted at Source)", icon: "📋", phase: "p1",
+        color: "#BA7517", dotColor: "#BA7517",
+        features: [
+          { t: "TDS rate by category", s: "Contractor 1.5%, Rent 10%, Professional 15%, etc.", legal: true },
+          { t: "TDS deduction on payments", s: "Auto-deduct on bill payment" },
+          { t: "TDS certificate (Form 7)", s: "Generate & print per vendor/period", legal: true },
+          { t: "TDS payable ledger", s: "Track liability to IRD" },
+          { t: "TDS return report", s: "Monthly TDS summary for IRD filing", legal: true },
+          { t: "TDS on rent threshold", s: "Apply TDS only above Rs. 3,000/month" },
+        ]
+      },
+      {
+        title: "IRD-Format Reports", icon: "📊", phase: "p1",
+        color: "#185FA5", dotColor: "#185FA5",
+        features: [
+          { t: "Purchase book (Kharida Kitab)", s: "IRD column format — auto-export to CSV", legal: true },
+          { t: "Sales book (Bikri Kitab)", s: "IRD column format", legal: true },
+          { t: "VAT audit file (XML/CSV)", s: "For IRD e-filing submission", legal: true },
+          { t: "Annual income statement", s: "For company tax filing" },
+          { t: "TDS summary report", s: "Category-wise quarterly & annual" },
+        ]
+      },
+      {
+        title: "PAN & VAT Registration", icon: "🪪", phase: "p1",
+        color: "#534AB7", dotColor: "#534AB7",
+        features: [
+          { t: "PAN number on party master", s: "Mandatory for every vendor/customer", legal: true },
+          { t: "VAT number on party master", s: "For VAT-registered parties" },
+          { t: "Print PAN/VAT on invoices", s: "Required by law on all bills", legal: true },
+          { t: "VAT registration threshold alert", s: "Alert when turnover nears Rs. 50 lakhs" },
+          { t: "Dual bill mode", s: "VAT bill vs non-VAT bill (PAN only)" },
+        ]
+      },
+      {
+        title: "Nepali Calendar & Fiscal Year", icon: "📅", phase: "p1",
+        color: "#0F6E56", dotColor: "#0F6E56",
+        features: [
+          { t: "Bikram Sambat (BS) date support", s: "Full BS calendar engine built-in", legal: true },
+          { t: "Nepal fiscal year (Shrawan–Ashadh)", s: "Correct year-end closing", legal: true },
+          { t: "BS ↔ AD date conversion", s: "Dual display on all forms" },
+          { t: "Nepali month names", s: "Baisakh to Chaitra labels" },
+          { t: "Quarter mapping", s: "Shrawan–Ashwin, Kartik–Poush, etc." },
+        ]
+      },
+      {
+        title: "Invoicing & Billing", icon: "🧮", phase: "p1",
+        color: "#993C1D", dotColor: "#993C1D",
+        features: [
+          { t: "IRD-approved bill format", s: "Pre-numbered, pre-approved layout", legal: true },
+          { t: "Bill numbering per fiscal year", s: "Resets each Shrawan 1", legal: true },
+          { t: "Proforma & tax invoice types", s: "Correct document type labelling" },
+          { t: "Credit/debit notes", s: "With original bill reference", legal: true },
+          { t: "Discount before/after VAT", s: "Correct sequence per IRD rules" },
+          { t: "Item-level VAT applicability", s: "Some items exempt; applied per line" },
+        ]
+      },
+      {
+        title: "Chart of Accounts", icon: "📒", phase: "p2",
+        color: "#3B6D11", dotColor: "#3B6D11",
+        features: [
+          { t: "Nepal-standard account heads", s: "Assets, liabilities, income, expenses" },
+          { t: "VAT input/output as control accounts", s: "Auto-linked to VAT module" },
+          { t: "TDS payable control account", s: "Tracks government liability" },
+          { t: "Multi-level chart of accounts", s: "Groups → heads → sub-heads" },
+          { t: "Retained earnings auto-transfer", s: "On year-end closing" },
+        ]
+      },
+      {
+        title: "Payroll & Employment", icon: "👤", phase: "p2",
+        color: "#993556", dotColor: "#993556",
+        features: [
+          { t: "SSF (Social Security Fund)", s: "Employee 11%, Employer 20%", legal: true },
+          { t: "CIT (Citizens Investment Trust)", s: "Voluntary deduction support", legal: true },
+          { t: "Income tax on salary (Schedule 1)", s: "Slab-based tax computation", legal: true },
+          { t: "Salary TDS deduction", s: "Monthly withholding & deposit tracking" },
+          { t: "Leave encashment & allowances", s: "Taxable vs non-taxable components" },
+          { t: "Form 7 for employees", s: "Annual salary tax certificate", legal: true },
+        ]
+      },
+      {
+        title: "Inventory", icon: "📦", phase: "p2",
+        color: "#185FA5", dotColor: "#185FA5",
+        features: [
+          { t: "Stock valuation (FIFO / weighted avg)", s: "Choose per item or company-wide" },
+          { t: "HSCode / commodity code mapping", s: "For customs & excise reporting" },
+          { t: "Unit of measurement conversion", s: "Kg, pcs, litre, etc." },
+          { t: "Opening stock import", s: "With cost value for VAT input claim" },
+          { t: "Batch & expiry tracking", s: "For pharma, food, FMCG" },
+        ]
+      },
+      {
+        title: "Banking & Reconciliation", icon: "🏦", phase: "p2",
+        color: "#534AB7", dotColor: "#534AB7",
+        features: [
+          { t: "Multi-bank account support", s: "NRB-licensed banks" },
+          { t: "Cheque printing", s: "Standard Nepal bank cheque format" },
+          { t: "Bank reconciliation statement", s: "Match ledger vs bank statement" },
+          { t: "TDS deposit tracking", s: "Track deposit to IRD via bank" },
+          { t: "e-banking import", s: "Parse bank statement CSV/PDF" },
+        ]
+      },
+      {
+        title: "Excise & Customs", icon: "🏛️", phase: "p3",
+        color: "#854F0B", dotColor: "#854F0B",
+        features: [
+          { t: "Excise duty (Abkari Shulka)", s: "For alcohol, tobacco, fuel sectors", legal: true },
+          { t: "Excise return report", s: "Monthly filing to IRD", legal: true },
+          { t: "Import duty calculation", s: "Based on HS code & declared value" },
+          { t: "Bonded warehouse tracking", s: "Deferred duty on stored goods" },
+        ]
+      },
+      {
+        title: "Audit Trail & Compliance", icon: "🔒", phase: "p3",
+        color: "#3d3d3a", dotColor: "#888780",
+        features: [
+          { t: "Immutable transaction log", s: "Required for IRD audit", legal: true },
+          { t: "User role & permission control", s: "Accountant, manager, owner levels" },
+          { t: "IRD e-filing integration", s: "Direct submission to IRD portal" },
+          { t: "Data backup with hash verification", s: "Tamper-evident archive" },
+          { t: "Multi-branch / multi-company", s: "Consolidated reporting" },
+          { t: "Nepali language (Devanagari) UI", s: "Full bilingual support" },
+        ]
+      },
+    ];
+
+    let currentFilter = 'all';
+
+    function filter(phase, el) {
+      currentFilter = phase;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      render();
+    }
+
+    function badgeLabel(p) {
+      return p === 'p1' ? 'Phase 1' : p === 'p2' ? 'Phase 2' : 'Phase 3';
+    }
+
+    function render() {
+      const grid = document.getElementById('grid');
+      const filtered = currentFilter === 'all' ? modules : modules.filter(m => m.phase === currentFilter);
+      grid.innerHTML = filtered.map(m => `
+        <div class="module">
+          <div class="mod-head">
+            <div class="mod-icon" style="background:${m.color}22">${m.icon}</div>
+            <div class="mod-title">${m.title}</div>
+            <span class="mod-badge badge-${m.phase}">${badgeLabel(m.phase)}</span>
+          </div>
+          <div class="mod-features">
+            ${m.features.map(f => `
+              <div class="feature">
+                <div class="f-dot" style="background:${m.dotColor}"></div>
+                <div>
+                  <div class="f-text">${f.t}${f.legal ? '<span class="legal-tag">IRD</span>' : ''}</div>
+                  ${f.s ? `<div class="f-sub">${f.s}</div>` : ''}
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    render();
+  </script>
+</body>
+</html>
