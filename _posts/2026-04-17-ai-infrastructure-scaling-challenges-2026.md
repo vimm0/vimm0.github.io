@@ -111,6 +111,6 @@ The unsexy infrastructure layer is becoming a strategic business asset.
 ---
 
 **Sources:**
-- [Top Strategic Technology Trends for 2026 | Gartner](https://www.gartner.com/en/articles/top-technology-trends-2026)
-- [Top Tech Trends 2026: AI Backbone, Intelligent Apps, Cloud 3.0 and More | Capgemini](https://www.capgemini.com/insights/research-library/top-tech-trends-of-2026/)
-- [The trends that will shape AI and tech in 2026 | IBM](https://www.ibm.com/think/news/ai-tech-trends-predictions-2026)
+- [Top Strategic Technology Trends for 2026](https://www.gartner.com/en/articles/top-technology-trends-2026) — Gartner
+- [Top Tech Trends 2026: AI Backbone, Intelligent Apps, Cloud 3.0 and More](https://www.capgemini.com/insights/research-library/top-tech-trends-of-2026/) — Capgemini
+- [The trends that will shape AI and tech in 2026](https://www.ibm.com/think/news/ai-tech-trends-predictions-2026) — IBM

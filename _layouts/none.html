@@ -1,0 +1,18 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/static/img/avatar.ico">
+  <meta name="author" content="{{ site.author }}">
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% seo %}
+</head>
+<body>
+  {{ content }}
+</body>
+</html>

@@ -37,22 +37,18 @@
 {% endfor %}
 
 {% if final_h2_ids.size > 0 %}
-    <div id="table-of-content">
+    <nav id="table-of-content" aria-label="Table of contents">
         {% for h2_text in final_h2_texts %}
             {% assign index = forloop.index | minus: 1 %}
-            <a href="#{{ final_h2_ids[index] }}">{{ forloop.index }}. {{ h2_text }}</a>
-            <!-- <br> -->
-            <!-- {{ final_h2_ids[index] }} -->
-            <!-- {{ final_h3_ids[index][0] }} -->
+            <a class="toc-h2" href="#{{ final_h2_ids[index] }}">{{ forloop.index }}. {{ h2_text }}</a>
             {% if final_h3_ids[index].size > 1 %}
                 {% for h3_text in final_h3_texts[index] %}
                     {% assign h3_index = forloop.index | minus: 1 %}
-                        {% if final_h2_ids[index] != final_h3_ids[index][h3_index] %}
-                            &emsp;<a href="#{{ final_h3_ids[index][h3_index] }}">- {{ h3_text }}</a>
-                            <!-- <br> -->
-                        {% endif %}
-                    {% endfor %}
+                    {% if final_h2_ids[index] != final_h3_ids[index][h3_index] %}
+                        <a class="toc-h3" href="#{{ final_h3_ids[index][h3_index] }}">{{ h3_text }}</a>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
         {% endfor %}
-    </div>
+    </nav>
 {% endif %}

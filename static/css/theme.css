@@ -6,7 +6,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
+/* Force light on the document root so browser dark-mode UA styles never leak through. */
+html { background: #ffffff; }
+
 :root {
+  color-scheme: light;
+
   /* ---------- Surface & Foreground ---------- */
   --bg:              #ffffff;
   --bg-subtle:       #f8fafc;       /* TOC, related-posts, code hover */
@@ -65,9 +70,69 @@
   --space-6: 2rem;
 
   --sidebar-width: 12rem;
+
+  /* ---------- Focus ---------- */
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.3);
+
+  /* ---------- Form semantics ---------- */
+  --success:     #16a34a;
+  --warning:     #d97706;
+  --danger:      #dc2626;
+  --disabled-fg: #94a3b8;
+  --disabled-bg: #f1f5f9;
+
+  /* ---------- Display type (slides / hero only) ---------- */
+  --fs-display-xl: 4.5rem;   /* 72px — title slide */
+  --fs-display-lg: 3rem;     /* 48px — section slide */
+  --fs-display-md: 2.25rem;  /* 36px — big quote */
 }
 
 * { box-sizing: border-box; }
+
+/* Keyboard users get a clear ring on every interactive element. */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius);
+}
+
+/* ---------- Form defaults (inherit Inter, expose error/disabled states) ---------- */
+input, textarea, select {
+  font-family: var(--font-sans);
+  font-feature-settings: var(--font-feature-settings);
+  font-size: var(--fs-base);
+  color: var(--fg);
+  background: var(--bg);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.5rem;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--link);
+  box-shadow: var(--focus-ring);
+}
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] { border-color: var(--danger); }
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+  color: var(--disabled-fg);
+  background: var(--disabled-bg);
+  cursor: not-allowed;
+}
+
+/* ---------- Tables (formalises custom-tables.css) ---------- */
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-base); }
+th, td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: var(--hairline) solid var(--border);
+}
+th { font-weight: 600; color: var(--fg); background: var(--bg-subtle); }
+tbody tr:hover { background: var(--bg-subtle); }
 
 body {
   font-family: var(--font-sans);
@@ -405,20 +470,42 @@ pre code { background: none; padding: 0; }
 
 /* ---------- Table of contents ---------- */
 #table-of-content {
-  margin: 0.5rem 0;
-  padding: 0.5rem 0.75rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.85rem 1rem;
   background: var(--bg-subtle);
+  border-left: 3px solid var(--link);
   border-radius: var(--radius);
-  font-size: var(--fs-xs);
-  line-height: 0.8rem;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
 }
 #table-of-content a {
   display: block;
-  padding: 0.05rem 0;
+  padding: 0.2rem 0;
   text-decoration: none;
   color: var(--fg);
+  transition: color 0.15s ease;
 }
 #table-of-content a:hover { color: var(--link); }
+#table-of-content .toc-h2 {
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+#table-of-content .toc-h2:first-child { margin-top: 0; }
+#table-of-content .toc-h3 {
+  padding-left: 1.5rem;
+  font-size: 0.95em;
+  color: var(--fg-muted, #555);
+  position: relative;
+}
+#table-of-content .toc-h3::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.85em;
+  width: 0.6rem;
+  height: 1px;
+  background: var(--border, #ccc);
+}
 
 .PageNavigation {
   display: flex;
@@ -569,4 +656,30 @@ pre code { background: none; padding: 0; }
   z-index: 9999;
   transition: width 0.1s ease-out;
   box-shadow: 0 0 10px var(--link-shadow);
+}
+
+/* ==========================================================================
+   Responsive — scale type down on narrow screens
+   ========================================================================== */
+@media (max-width: 640px) {
+  :root { --fs-h1: 1.35rem; --fs-h2: 1.15rem; }
+  body { font-size: 0.95rem; }
+}
+
+/* ==========================================================================
+   Print — readable, no chrome
+   ========================================================================== */
+@media print {
+  :root { --bg: #fff; --fg: #000; --link: #000; }
+  body { font-size: 11pt; line-height: 1.5; }
+  .no-print,
+  nav,
+  .site-sidebar,
+  .site-search,
+  .scroll-progress-bar,
+  .share-page,
+  .PageNavigation { display: none !important; }
+  pre, code { background: #f5f5f5 !important; color: #000 !important; }
+  a { text-decoration: underline; color: #000 !important; }
+  .site-wrap { max-width: none; padding: 0; }
 }
