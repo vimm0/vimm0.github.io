@@ -14,6 +14,8 @@ layout: compress
 
     {% seo %}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/static/css/theme.css">
     <link rel="stylesheet" href="/static/css/syntax.css">
     <link rel="stylesheet" href="{{ '/assets/css/custom-tables.css' | relative_url }}">
@@ -32,7 +34,10 @@ layout: compress
             </div>
             <div class="site-social">
                 {% for link in site.social %}
-                <a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.text }}">{{ link.text }}</a>
+                <a href="{{ link.link }}" target="_blank" rel="noopener" aria-label="{{ link.text }}">
+                    {% if link.icon %}<i data-lucide="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
+                    <span>{{ link.text }}</span>
+                </a>
                 {% endfor %}
             </div>
             <nav>
@@ -43,10 +48,13 @@ layout: compress
                 </ul>
             </nav>
             <div class="site-search" id="js-search">
-                <input type="search" id="js-search__input" class="site-search__input" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
+                <div class="site-search__wrap">
+                    <i class="site-search__icon" data-lucide="search" aria-hidden="true"></i>
+                    <input type="search" id="js-search__input" class="site-search__input" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
+                </div>
                 <ul class="site-search__results" id="js-search__results" aria-live="polite"></ul>
             </div>
-           
+
         </aside>
         <script>
             window.__SEARCH_POSTS__ = [
@@ -68,6 +76,14 @@ layout: compress
             </footer>
         </main>
     </div>
+
+    <!-- Lucide icons (v2 design system) -->
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script>
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            window.lucide.createIcons();
+        }
+    </script>
 
     {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>

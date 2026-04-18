@@ -27,14 +27,19 @@ collections:
 social:
     - text: GitHub
       link: "https://github.com/vimm0"
+      icon: github
     - text: Twitter
       link: "https://twitter.com/vimm0"
+      icon: twitter
     - text: LinkedIn
       link: "https://www.linkedin.com/in/sandesh-rana-12783611a/"
+      icon: linkedin
     - text: Stack Overflow
       link: "https://stackoverflow.com/users/6108201/vimm-rana"
+      icon: layers
     - text: YouTube
       link: "https://www.youtube.com/@nepexgroup"
+      icon: youtube
 
 share:
   twitter_username: vimm0

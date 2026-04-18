@@ -6,12 +6,14 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
     <p class="post-meta">
-      <time class="time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date |
-        date_to_string }}</time>
+      <span class="meta-item">
+        <i data-lucide="calendar" aria-hidden="true"></i>
+        <time class="time" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+      </span>
       {% if page.categories %}
-      <span class="categories">
-        &raquo; {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if
-        forloop.last == false %}, {% endif %}{% endfor %}
+      <span class="meta-item categories">
+        <i data-lucide="folder" aria-hidden="true"></i>
+        {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
       </span>
       {% endif %}
     </p>

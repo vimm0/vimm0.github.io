@@ -1,19 +1,25 @@
+{% capture _post_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% capture _tweet_text %}{{ page.title | url_encode }}{% endcapture %}
 <div class="share-page">
-  <span style="float: left;">Share this on &rarr;&nbsp;&nbsp;</span>
+  <span class="share-page__label"><i data-lucide="share-2" aria-hidden="true"></i>Share</span>
 
-  <!-- Twitter -->
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.share.twitter_username }}">Tweet</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <a href="https://twitter.com/intent/tweet?text={{ _tweet_text }}&url={{ _post_url | url_encode }}{% if site.share.twitter_username %}&via={{ site.share.twitter_username }}{% endif %}"
+     target="_blank" rel="noopener" aria-label="Share on Twitter">
+    <i data-lucide="twitter" aria-hidden="true"></i><span>Twitter</span>
+  </a>
 
-  <!-- Facebook -->
-  <!--<div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>-->
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ _post_url | url_encode }}"
+     target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+    <i data-lucide="linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+  </a>
+
+  <a href="{{ _post_url }}"
+     class="js-copy-link"
+     data-copy-url="{{ _post_url }}"
+     aria-label="Copy link"
+     onclick="event.preventDefault(); var u=this.getAttribute('data-copy-url'); if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){var s=document.getElementById('js-copy-status'); if(s){s.textContent='Link copied';}});} else { window.prompt('Copy link:', u); } return false;">
+    <i data-lucide="link-2" aria-hidden="true"></i><span>Copy link</span>
+  </a>
+
+  <span id="js-copy-status" aria-live="polite" style="font-size: var(--fs-sm);"></span>
 </div>
-
-<!--<div id="fb-root"></div>-->
-<!--<script>(function(d, s, id) {-->
-  <!--var js, fjs = d.getElementsByTagName(s)[0];-->
-  <!--if (d.getElementById(id)) return;-->
-  <!--js = d.createElement(s); js.id = id;-->
-  <!--js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId={{ site.share.fb_appid }}";-->
-  <!--fjs.parentNode.insertBefore(js, fjs);-->
-<!--}(document, 'script', 'facebook-jssdk'));</script>-->
