@@ -54,7 +54,11 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "https://vimm0.github.io"
+# Must match CNAME (blog.nepexgroup.com). Jekyll derives canonical tags, the
+# sitemap and the feed from `url`, so pointing it at the old github.io host made
+# all 217 pages declare a cross-domain canonical — Google credited the content to
+# vimm0.github.io and treated blog.nepexgroup.com as a duplicate.
+url: "https://blog.nepexgroup.com"
 baseurl: ""
 paginate: 20
 per_page: 20
